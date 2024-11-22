@@ -98,19 +98,25 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     },
-
+    markdownTab: {
+      // 启用代码选项卡
+      codeTabs: true,
+      // 启用选项卡
+      tabs: true,
+    },
+    markdownHint: {
+      // 启用提示容器，默认启用
+      hint: true,
+      // 启用 GFM 警告
+      alert: true,
+    },
+    
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
-      alert: true,
-      hint: true,
       align: true,
       attrs: true,
-      codetabs: true,
       component: true,
       demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
       include: true,
       mark: true,
       plantuml: true,
@@ -130,7 +136,6 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
       tasklist: true,
       vPre: true,
 

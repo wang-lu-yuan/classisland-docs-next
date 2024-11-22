@@ -18,6 +18,8 @@ export const zhSidebar = sidebar({
         "basic.md",
         {
           text: "档案设置",
+          collapsible: true,
+          expanded: true,
           prefix: "profile/",
           children: [
             "README.md",
@@ -30,6 +32,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "迁移课表",
+          collapsible: true,
           prefix: "migrate/",
           children: [
             "README.md",
@@ -43,6 +46,7 @@ export const zhSidebar = sidebar({
         "advanced.md",
         {
           text: "错误排除",
+          collapsible: true,
           prefix: "faq/",
           children: [
             "faq.md",
@@ -52,6 +56,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "附录",
+          collapsible: true,
           prefix: "appendix/",
           children: [
             "revert-win7-patching.md",
@@ -81,6 +86,7 @@ export const zhSidebar = sidebar({
         "README.md",
         {
           text: "开始",
+          collapsible: true,
           prefix: "get-started/",
           children: [
             "devlopment.md",
@@ -89,6 +95,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "插件",
+          collapsible: true,
           prefix: "plugins/",
           children: [
             "create-project.md",
@@ -103,6 +110,7 @@ export const zhSidebar = sidebar({
         "components.md",
         {
           text: "提醒",
+          collapsible: true,
           prefix: "notifications/",
           children: [
             "index.md",
@@ -112,6 +120,7 @@ export const zhSidebar = sidebar({
         "settings-page.md",
         {
           text: "跨进程通信",
+          collapsible: true,
           prefix: "ipc/",
           children: [
             "README.md",

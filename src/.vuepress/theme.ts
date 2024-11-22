@@ -25,8 +25,9 @@ export default hopeTheme({
   // sidebar,
 
   // // 页脚
-  // footer: "Copyright (c) 2024 ClassIsland",
-  // displayFooter: true,
+  
+  displayFooter: true,
+  copyright: false,
 
   locales: {
     "/": {
@@ -37,7 +38,11 @@ export default hopeTheme({
       sidebar: zhSidebar,
 
       //  autocorrect-disable
-      footer: "本文档以 CC BY-NC-SA 4.0 许可协议授权。",
+      footer: "Copyright (c) 2024 ClassIsland | " +
+          '本文档以 CC BY-NC-SA 4.0 许可协议授权。' + 
+          '<br/>' +
+          '<a href="https://beian.miit.gov.cn/" target="_blank"> 沪ICP备2024084943号</a> | ' +
+          '<img src="https://www.beian.gov.cn/img/new/gongan.png" > <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank"> 沪公网安备31012002006157号 </a>',
       //  autocorrect-enable
 
       displayFooter: true,

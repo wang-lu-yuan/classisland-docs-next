@@ -23,15 +23,6 @@ actions:
   - text: GitHub 仓库
     link: https://github.com/ClassIsland/ClassIsland
 
-
-copyright: false
-footer: |
-  本文档以 CC BY-NC-SA 4.0 许可协议授权。
-  <br/>
-  <img src="https://www.beian.gov.cn/img/new/gongan.png" >
-  <a href="https://beian.miit.gov.cn/" target="_blank"> 沪 ICP 备 2024084943 号</a></br>
-  <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank"> 沪公网安备 31012002006157 号 </a>
-footerHtml: true
 ---
 
 欢迎来到 ClassIsland 的文档。

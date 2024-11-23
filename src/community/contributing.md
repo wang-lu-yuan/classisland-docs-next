@@ -1,3 +1,7 @@
+---
+icon: code-commit
+---
+
 # 向 ClassIsland 文档做贡献
 
 ::: warning 注意

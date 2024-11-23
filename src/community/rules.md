@@ -1,5 +1,6 @@
 ---
 author: HelloWRC
+icon: scale-balanced
 ---
 
 # 社区规范

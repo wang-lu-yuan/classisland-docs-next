@@ -5,6 +5,9 @@ index: true
 
 # 讨论社区
 
+> [!warning]
+> 要加入讨论社区，您需要遵循相应讨论社区的[社区规范](./rules.md)。
+
 您也可以加入这些社区**寻求帮助**：
 
 - [QQ 频道](https://pd.qq.com/s/scb3wzia)

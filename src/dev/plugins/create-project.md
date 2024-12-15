@@ -2,9 +2,7 @@
 
 本文章将介绍如何创建、调试并运行 ClassIsland 的插件项目。
 
-::: warning
-本文章所涉及内容仍在开发中，随时可能发生变动。请注意关注文档更变。
-:::
+## 设置开发环境
 
 在开始之前，您需要按照[设置 ClassIsland 插件开发环境](../get-started/devlopment-plugins.md)的指引设置插件开发环境。
 
@@ -50,7 +48,7 @@
     ```
     :::
 
-4. 打开项目文件，添加 `EnableDynamicLoading` 属性以允许插件被动态加载，并在 `ClassIsland.PluginSdk` 的引用项上设置`ExcludeAssets` 属性为 `runtime` 以阻止插件 SDK 相关依赖项流入构建结果。
+4. 打开项目文件，添加 `EnableDynamicLoading` 属性以允许插件被动态加载，并在 `ClassIsland.PluginSdk` 的引用项上设置`ExcludeAssets` 属性为 `runtime; native` 以阻止插件 SDK 相关依赖项流入构建结果。
 
     ```xml title="MyPlugin.csproj" hl_lines="9 13"
     <Project Sdk="Microsoft.NET.Sdk">
@@ -64,8 +62,8 @@
             <EnableDynamicLoading>True</EnableDynamicLoading>
         </PropertyGroup>
         <ItemGroup>
-            <PackageReference Include="ClassIsland.PluginSdk" Version="1.0.0">
-                <ExcludeAssets>runtime</ExcludeAssets>
+            <PackageReference Include="ClassIsland.PluginSdk" Version="1.5.0.*">
+                <ExcludeAssets>runtime; native</ExcludeAssets>
             </PackageReference>
         </ItemGroup>
     </Project>
@@ -214,4 +212,4 @@ using System.Windows;
 
 ## 继续深入
 
-您可以继续阅读文章来进一步了解相关 API 的用法，或者查看 GitHub 上的 [插件示例](https://github.com/ClassIsland/ExamplePlugins)。
+您可以继续阅读本文档来进一步了解相关 API 的用法，或者查看 GitHub 上的 [插件示例](https://github.com/ClassIsland/ExamplePlugins)。您也可以看看[插件功能请求板块](https://github.com/ClassIsland/ClassIsland/discussions/categories/%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E8%AF%B7%E6%B1%82)来寻找灵感。

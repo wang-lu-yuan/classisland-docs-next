@@ -98,6 +98,7 @@ export const zhSidebar = sidebar({
           collapsible: true,
           prefix: "plugins/",
           children: [
+            "README.md",
             "create-project.md",
             "basics.md",
             "plugin-base.md",

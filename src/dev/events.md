@@ -4,6 +4,14 @@
 
 .NET 通用主机和 ClassIsland 提供了一系列的事件，您可以通过调取对应的服务等方式订阅这些事件。
 
+> [!warning]
+> 如果您在组件中订阅组件以外的服务的事件，请务必在组件卸载（Unload 事件触发）时取消订阅这些事件，否则组件可能不会被 GC 回收，造成内存泄露。下面的代码可以添加到组件的构造函数中，以实现在加载时订阅相关事件，并在卸载时自动取消订阅。
+> 
+> ``` csharp
+> Loaded += (_, _) => LessonsService.PostMainTimerTicked += LessonsServiceOnPostMainTimerTicked;
+> Unloaded += (_, _) => LessonsService.PostMainTimerTicked -= LessonsServiceOnPostMainTimerTicked;
+> ```
+
 ## 生命周期
 
 :::details 生命周期事件示意图
@@ -14,6 +22,7 @@
 flowchart TD
     Startup(["应用启动"])
     --> ConfigureHost["配置通用主机"]
+    --> InitializePlugins["初始化插件（PluginBase.Initialize）"]
     --> HostStartup["主机启动"]
     --> LaunchMainLoop["启动主循环"]
     --> AppStarted{{"AppStarted"}}

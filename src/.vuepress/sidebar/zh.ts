@@ -41,6 +41,7 @@ export const zhSidebar = sidebar({
           icon: "fa-solid fa-file-import"
         },
         "notifications.md",
+        "automation.md",
         "uri-navigation.md",
         "backup.md",
         "advanced.md",

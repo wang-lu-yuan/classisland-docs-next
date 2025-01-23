@@ -118,6 +118,7 @@ export const zhSidebar = sidebar({
             "advanced-request.md",
           ],
         },
+        "lessons-service.md",
         "settings-page.md",
         {
           text: "跨进程通信",

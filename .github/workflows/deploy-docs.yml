@@ -1,4 +1,3 @@
-
 name: 部署文档
 
 on:
@@ -24,7 +23,6 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1
-
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
@@ -58,7 +56,7 @@ jobs:
           INPUT_PATH: ./build
 
       - name: 上传工件
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: ${{ runner.temp }}/artifact.tar

@@ -4,7 +4,8 @@ category:
   - 使用指南
 tag:
   - 应用
-  - Uri 导航
+  - Uri导航
+  - Url协议
 ---
 
 # Uri 导航
@@ -21,7 +22,7 @@ ClassIsland 默认的 Uri 导航协议是 `classisland://`。应用内置的导�
 
 您可以在[【应用设置】->【基本】](classisland://app/settings/general) 中启用【注册 Url 协议】选项以注册 Url 导航协议。
 
-![1721609023773](image/uri-navigation/1721609023773.png)
+![注册url协议](image/uri-navigation/1721609023773.png)
 
 ::: warning
 在有些情况下，部分杀毒软件可能会将【注册 Url 协议】视为敏感行为进行拦截。如果在开启此功能时出现这种情况，请点击【允许】。

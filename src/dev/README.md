@@ -75,4 +75,4 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 - [**跨进程通信**](./ipc/README.md)
     - [使用 IPC](./ipc/ipc.md)
     - [IPC 参考](./ipc/reference.md)
-- 参考文档
+- [API 参考](https://api.docs.classisland.tech/)

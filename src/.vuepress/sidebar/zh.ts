@@ -140,6 +140,10 @@ export const zhSidebar = sidebar({
             "ipc.md",
             "reference.md"
           ]
+        },
+        {
+          text: "API 参考",
+          link: "https://api.docs.classisland.tech/"
         }
       ],
     },

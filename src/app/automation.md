@@ -66,6 +66,8 @@ tag:
 
 ![规则集示例](image\automation\规则集示例.png)
 
+规则集中的【前台窗口类名】、【前台窗口标题】，是指当前“焦点窗口”（也可以理解为正在使用的窗口）的类名或标题。你可以通过[Catch_Window_Tool](https://github.com/SRInternet-Studio/Catch_Window_Tool)工具查看某一个窗口的类名或标题。而【前台窗口进程】，则是指当前“焦点窗口”的进程名。
+
 ### 行动
 
 **行动** (Action) 则可以定义一些操作，如更改应用设置、启动指定程序等。

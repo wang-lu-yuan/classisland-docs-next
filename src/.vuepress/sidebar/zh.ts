@@ -41,6 +41,7 @@ export const zhSidebar = sidebar({
           icon: "fa-solid fa-file-import"
         },
         "notifications.md",
+        "automation.md",
         "uri-navigation.md",
         "backup.md",
         "advanced.md",
@@ -75,7 +76,17 @@ export const zhSidebar = sidebar({
         "connect-to-mgmt-server.md",
         "configure.md",
         "policy.md",
-        "tutorial-create-management-config.md",
+        {
+          text: "教程：手动编写集控配置文件",
+          collapsible: true,
+          expanded: true,
+          prefix: "tutorial-create-management-config/",
+          children: [
+            "tutorial-create-management-config.md",
+            "tutorial-partition-management-config.md",
+          ],
+          icon: "fa-solid fa-book"
+        },
       ],
     },
   ],

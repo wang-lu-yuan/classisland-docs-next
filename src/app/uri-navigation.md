@@ -68,6 +68,10 @@ classisland://app/settings/{page}/[...]
 | 调试 | debug | 调试 |
 | 笔刷 | debug_brushes | 调试 |
 
+### 自动化
+
+详见 [【自动化】-【触发器】](automation.md#触发器)章节。
+
 ### 档案设置
 
 ``` plaintext
@@ -78,15 +82,15 @@ classisland://app/profile/
 
 ### 换课
 
+> [!Tip]
+> 在当前没有加载课表时，此 Uri 不起作用。
+
 ``` plaintext
 classisland://app/class-swap
 ```
 
 打开换课窗口。
 
-::: note
-在当前没有加载课表时，此 Uri 不起作用。
-:::
 
 ### 测试导航
 

@@ -52,7 +52,7 @@ tag:
 ![触发器](image\automation\触发器.png)
 
 **`收到信号时`**，是指收到“[行动](#行动)”中相应的“广播信号”的事件。例如，你在其他自动化流程中设置的`广播信号：信号1`行动执行时，触发器`收到信号时：信号1`将被触发，将会执行该触发器所在的自动化流程。
-**`调用uri时`**，在收到以下两种uri时触发：`classisland://app/api/automation/run/xxx`或`classisland://app/api/automation/revert/xxx`。（参阅[Uri导航](./uri-navigation.md)，需要启用【注册Url协议】选项）。
+**`调用uri时`**，在收到以下两种uri时触发：`classisland://app/api/automation/run/xxx`或`classisland://app/api/automation/revert/xxx`。（参阅[Uri导航](./uri-navigation.md)，需要启用[【注册Url协议】](./uri-navigation.md#注册-url-协议)选项）。
 **`规则集更新时`**，在满足规则集设定时触发。
 **`上课时`**、**`下课时`**、**`课间休息时`** 和 **`放学时`** ，字面意思；**`当前时间状态变化时`**，即前面四种情况任意一种触发时。
 

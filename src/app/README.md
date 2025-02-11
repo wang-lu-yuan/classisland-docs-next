@@ -22,7 +22,9 @@ category:
     - [时间表](profile/time-layout.md)
     - [科目](profile/subject.md)
 - [提醒](notifications.md)
+- [自动化](automation.md)
 - [Uri 导航](uri-navigation.md)
+- [应用数据备份](backup.md)
 
 学习完以上的内容，就掌握了本软件的基本功能。此外，本应用的大部分按钮都有工具提示，将鼠标放在按钮上即可查看按钮功能的解释。应用设置页面中大部分的选项中都有对应的解释。这些解释可以帮助您进一步了解本应用。
 

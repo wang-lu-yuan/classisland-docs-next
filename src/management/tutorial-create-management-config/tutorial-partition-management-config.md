@@ -41,12 +41,12 @@ ClassIsland 默认档案名称为 `Default.json`,您也可以使用您自定义�
 ```json:TimeLayouts.json
 {
     "Name": "",
-    "TimeLayouts": {},
-    "ClassPlans": {
-        // 粘贴从 Default.json 中复制的 ClassPlans 内容
+    "TimeLayouts": {
+       // 粘贴从 Default.json 中复制的 TimeLayouts内容
     },
+    "ClassPlans": {},
     "Subjects": {}
-}     
+} 
 ```
 
 ### 拆分出 ClassPlans.json

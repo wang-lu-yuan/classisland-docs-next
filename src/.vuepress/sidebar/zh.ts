@@ -82,7 +82,7 @@ export const zhSidebar = sidebar({
           expanded: true,
           prefix: "tutorial-create-management-config/",
           children: [
-            "tutorial-create-management-config.md",
+            "README.md",
             "tutorial-partition-management-config.md",
           ],
           icon: "fa-solid fa-book"

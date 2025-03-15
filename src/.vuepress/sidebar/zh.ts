@@ -129,6 +129,7 @@ export const zhSidebar = sidebar({
             "advanced-request.md",
           ],
         },
+        "lessons-service.md",
         "settings-page.md",
         {
           text: "跨进程通信",
@@ -139,6 +140,10 @@ export const zhSidebar = sidebar({
             "ipc.md",
             "reference.md"
           ]
+        },
+        {
+          text: "API 参考",
+          link: "https://api.docs.classisland.tech/"
         }
       ],
     },

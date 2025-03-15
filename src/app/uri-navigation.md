@@ -4,7 +4,8 @@ category:
   - 使用指南
 tag:
   - 应用
-  - Uri 导航
+  - Uri导航
+  - Url协议
 ---
 
 # Uri 导航
@@ -21,7 +22,7 @@ ClassIsland 默认的 Uri 导航协议是 `classisland://`。应用内置的导�
 
 您可以在[【应用设置】->【基本】](classisland://app/settings/general) 中启用【注册 Url 协议】选项以注册 Url 导航协议。
 
-![1721609023773](image/uri-navigation/1721609023773.png)
+![注册url协议](image/uri-navigation/1721609023773.png)
 
 ::: warning
 在有些情况下，部分杀毒软件可能会将【注册 Url 协议】视为敏感行为进行拦截。如果在开启此功能时出现这种情况，请点击【允许】。
@@ -67,6 +68,10 @@ classisland://app/settings/{page}/[...]
 | 调试 | debug | 调试 |
 | 笔刷 | debug_brushes | 调试 |
 
+### 自动化
+
+详见 [【自动化】-【触发器】](automation.md#触发器)章节。
+
 ### 档案设置
 
 ``` plaintext
@@ -77,15 +82,15 @@ classisland://app/profile/
 
 ### 换课
 
+> [!Tip]
+> 在当前没有加载课表时，此 Uri 不起作用。
+
 ``` plaintext
 classisland://app/class-swap
 ```
 
 打开换课窗口。
 
-::: note
-在当前没有加载课表时，此 Uri 不起作用。
-:::
 
 ### 测试导航
 

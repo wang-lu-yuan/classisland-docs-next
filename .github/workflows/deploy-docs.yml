@@ -10,6 +10,17 @@ permissions:
 
 jobs:
   build:
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    
+    concurrency:
+      group: "web-deploy"
+      cancel-in-progress: false
+    environment:
+      name: classisland-web
+    name: "Build & Deploy"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,32 +53,16 @@ jobs:
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: appleboy/scp-action@v1
         with:
-          path: ./src/.vuepress/dist/
-  
-  deploy:
-    # Add a dependency to the build job
-    needs: build
+          host: ${{ secrets.DEPLOY_WEB_IP }}
+          username: ${{ secrets.DEPLOY_WEB_USERNAME }}
+          password: ${{ secrets.DEPLOY_WEB_USER_PASSWORD }}
+          port: ${{ secrets.DEPLOY_WEB_PORT }}
+          source: "./src/.vuepress/dist/"
+          target: ${{ secrets.DEPLOY_WEB_PORT }}
 
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-      
       - name: 提交 IndexNow
         uses: bojieyang/indexnow-action@v1
         with:
@@ -79,3 +74,4 @@ jobs:
           limit: 100
           key: ${{ secrets.INDEXNOW_KEY }}
           key-location: ${{ secrets.INDEXNOW_KEY_LOCATION }}
+  

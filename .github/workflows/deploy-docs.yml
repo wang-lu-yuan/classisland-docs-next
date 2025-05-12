@@ -54,14 +54,21 @@ jobs:
           > src/.vuepress/dist/.nojekyll
 
       - name: Deploy
-        uses: appleboy/scp-action@v1
+        uses: easingthemes/ssh-deploy@main
         with:
-          host: ${{ secrets.DEPLOY_WEB_IP }}
-          username: ${{ secrets.DEPLOY_WEB_USERNAME }}
-          password: ${{ secrets.DEPLOY_WEB_USER_PASSWORD }}
-          port: ${{ secrets.DEPLOY_WEB_PORT }}
-          source: "./src/.vuepress/dist/"
-          target: ${{ secrets.DEPLOY_WEB_PORT }}
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_WEB_PRIVATEKEY }}
+          # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
+          ARGS: "-avz --delete"
+          # 源目录
+          SOURCE: "./src/.vuepress/dist/"
+          # 部署目标主机
+          REMOTE_HOST: ${{ secrets.DEPLOY_WEB_IP }}
+          # 部署目标主机端口
+          REMOTE_PORT: ${{ secrets.DEPLOY_WEB_PORT }}
+          # 登录用户
+          REMOTE_USER: ${{ secrets.DEPLOY_WEB_USERNAME }}
+          # 部署目标目录
+          TARGET: ${{ secrets.DEPLOY_WEB_TARGET }}
 
       - name: 提交 IndexNow
         uses: bojieyang/indexnow-action@v1

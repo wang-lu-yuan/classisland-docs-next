@@ -57,7 +57,7 @@ jobs:
         with:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_WEB_PRIVATEKEY }}
           # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
-          ARGS: "-avz --delete --no-times"
+          ARGS: "-avz --delete --no-times --no-perms"
           # 源目录
           SOURCE: "./src/.vuepress/dist/"
           # 部署目标主机

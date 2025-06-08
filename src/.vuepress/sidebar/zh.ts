@@ -50,6 +50,7 @@ export const zhSidebar = sidebar({
           collapsible: true,
           prefix: "faq/",
           children: [
+            "README.md",
             "faq.md",
             "reporting-issue.md",
           ],
@@ -131,6 +132,14 @@ export const zhSidebar = sidebar({
         },
         "lessons-service.md",
         "settings-page.md",
+        {
+          text: "规则集",
+          collapsible: true,
+          prefix: "ruleset/",
+          children: [
+            "README.md",
+          ]
+        },
         {
           text: "跨进程通信",
           collapsible: true,

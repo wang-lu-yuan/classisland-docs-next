@@ -6,6 +6,16 @@
 
 :::tabs#pack_method
 
+@tab 一键打包（推荐）
+
+在插件 SDK 1.6.0.5 及以上版本中，您可以在插件项目文件夹使用以下命令一键打包插件，并输出校验和等信息。
+
+``` powershell
+dotnet publish -p:CreateCipx=true
+```
+
+运行命令后，插件包和校验和信息会输出在项目目录下的 `cipx` 目录中。
+
 @tab Powershell Core
 
 在 Powershell Core 中使用以下命令将插件输出/发布目录打包到一个扩展名为`.cipx`的`zip`压缩文件中。
@@ -69,6 +79,9 @@ assetsRoot: master/HelloWorldPlugin
 ```
 
 您还需要将打包后的插件上传到**您的插件的仓库**的 Release 中，并添加 MD5 校验信息。
+
+> [!note]
+> 如果您使用了一键打包，默认情况下已自动生成 MD5 校验信息，可以跳过此步骤。
 
 :::tabs#pack_method
 

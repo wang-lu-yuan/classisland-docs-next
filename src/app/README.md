@@ -34,6 +34,7 @@ category:
 
 如果您在使用 ClassIsland 的过程中遇到问题，可以参考以下文档排除问题。
 
+- [错误排除](./faq/README.md)：在使用 ClassIsland 的过程中遇到的问题时怎么办。
 - [常见问题](./faq/faq.md)：用户通常能自行解决的问题。
 - [如何获取调试信息](./reporting-issue.md)：反馈问题时收集日志等调试信息的方法。
 

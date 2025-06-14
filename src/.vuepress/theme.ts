@@ -135,7 +135,7 @@ export default hopeTheme({
       notationFocus: true,
       notationHighlight: true,
     },
-    focus: true,
+    focus: false,
   },
   // 在这里配置主题提供的插件
   plugins: {

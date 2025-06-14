@@ -9,7 +9,7 @@
 :::
 
 > [!note]
-> 本文档包含的内容均基于提醒 V2 API。如果您正在开发基于提醒 V1 API（已弃用）的插件，请参阅文档[提醒（旧版）](../legacy/notifications/README.md)。
+> 本文档包含的内容基于提醒 V2 API。如果您正在开发基于提醒 V1 API（已弃用）的插件，请参阅文档[提醒（旧版）](../legacy/notifications/README.md)。
 
 <!-- ??? note "演示视频"
     <video src="../image/index/1724501396690.mp4" muted controls loop></video> -->
@@ -118,6 +118,24 @@ public class ActionNotificationProvider : NotificationProviderBase {
 
 其中 `MaskContent` 和 `OverlayContent` 属性类型是提醒内容[`NotificationContent`](https://api.docs.classisland.tech/api/ClassIsland.Core.Models.Notification.NotificationContent.html)，指定了提醒对应部分的内容信息，比如显示内容、显示时长和朗读内容等。您可以自定义其中的内容，也可以直接使用应用提供的[提醒内容模板](./notification-content.md#提醒内容模板)。
 
+总地来说，提醒请求的结构和传输流程如下图所示：
+
+```mermaid
+graph LR
+    subgraph s1["提醒请求"]
+        n1["提醒内容：遮罩内容"]
+        n2["提醒内容：正文内容"]
+    end
+    n4["提醒提供方"] -- 构建 --> s1
+    s1 -- 发送 --> n3["提醒主机"]
+    n3 -- 接收并处理 --> n5["主界面"]
+    n2 -- 显示 --> n5
+    n1 -- 显示 --> n5
+
+```
+
+### 发送提醒
+
 我们可以通过提醒提供方基类提供的方法[ShowNotification](https://api.docs.classisland.tech/api/ClassIsland.Core.Abstractions.Services.NotificationProviders.NotificationProviderBase.html#ClassIsland_Core_Abstractions_Services_NotificationProviders_NotificationProviderBase_ShowNotification_ClassIsland_Core_Models_Notification_NotificationRequest_)直接发送一个提醒。在 LessonsServiceOnOnBreakingTime 方法中添加如下代码：
 
 ``` csharp title="Services/NotificationProviders/MyNotificationProvider.cs" 
@@ -146,7 +164,7 @@ public class ActionNotificationProvider : NotificationProviderBase {
 
 如果您想要更深入地自定义提醒各个部分显示的内容，可以阅读文档[提醒内容](./notification-content.md)。
 
-🎉恭喜！您成功从代码显示一条提醒！
+🎉恭喜！您成功从代码显示了一条提醒！
 
 ## 提醒设置
 
@@ -228,7 +246,7 @@ public class MyNotificationProvider : NotificationProviderBase<MyNotificationSet
 接着我们需要创建提醒设置界面，以调整要自定义显示的文本。添加以下代码：
 
 :::tabs
-@tab <HopeIcon icon="code"/> `Controls/NotificationProviders/MyNotificationProviderSettingsControl.xaml`
+@tab Controls/NotificationProviders/MyNotificationProviderSettingsControl.xaml
 
 ``` xml
 <ci:NotificationProviderControlBase
@@ -249,7 +267,7 @@ public class MyNotificationProvider : NotificationProviderBase<MyNotificationSet
 
 ```
 
-@tab <HopeIcon icon="code"/> `Controls/NotificationProviders/MyNotificationProviderSettingsControl.xaml.cs`
+@tab Controls/NotificationProviders/MyNotificationProviderSettingsControl.xaml.cs
 
 ``` csharp
 namespace PluginWithNotificationProviders.Controls.NotificationProviders;

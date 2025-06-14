@@ -127,7 +127,8 @@ export const zhSidebar = sidebar({
           prefix: "notifications/",
           children: [
             "index.md",
-            "advanced-request.md",
+            "notification-content.md",
+            "advanced.md",
           ],
         },
         "lessons-service.md",
@@ -148,6 +149,22 @@ export const zhSidebar = sidebar({
             "README.md",
             "ipc.md",
             "reference.md"
+          ]
+        },
+        {
+          text: "旧版文档",
+          collapsible: true,
+          prefix: "legacy/",
+          children: [
+            "README.md",
+            {
+              text: "提醒（旧版）",
+              collapsible: true,
+              prefix: "notifications/",
+              children: [
+                "README.md",
+              ]
+            },
           ]
         },
         {

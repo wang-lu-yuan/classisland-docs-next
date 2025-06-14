@@ -73,10 +73,70 @@ export default hopeTheme({
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
-
-  // 如果想要实时查看任何改变，启用它。注：这对更新性能有很大负面影响
-  // hotReload: true,
   pure: true,
+  markdown: {
+    align: true,
+    attrs: true,
+    component: true,
+    demo: true,
+    include: true,
+    mark: true,
+    plantuml: true,
+    spoiler: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tasklist: true,
+    vPre: true,
+
+    // insert component easily
+
+    // 在启用之前安装 echarts
+    echarts: true,
+
+    // 在启用之前安装 flowchart.ts
+    flowchart: true,
+
+    // gfm requires mathjax-full to provide tex support
+    gfm: true,
+
+    // 在启用之前安装 katex
+    // katex: true,
+
+    // 在启用之前安装 mathjax-full
+    // mathjax: true,
+
+    // 在启用之前安装 mermaid
+    mermaid: true,
+    alert: true,
+    hint: true,
+    tabs: true,
+    codeTabs: true,
+    highlighter: {
+      type: "shiki",
+      themes: {
+        light: "one-light",
+        dark: "one-dark-pro",
+      },
+      highlightLines: true,
+      notationDiff: true,
+      notationFocus: true,
+      notationHighlight: true,
+    },
+    focus: true,
+  },
   // 在这里配置主题提供的插件
   plugins: {
     // // 注意：仅用于测试！你必须自行生成并在生产环境中使用自己的评论服务
@@ -88,99 +148,9 @@ export default hopeTheme({
     //   categoryId: "DIC_kwDOMp3pZs4CiBuf",
     //   mapping: "pathname",
     // },
-    searchPro: {},
-    shiki: {
-      themes: {
-        light: "one-light",
-        dark: "one-dark-pro",
-      },
-      highlightLines: true,
-      notationDiff: true,
-      notationFocus: true,
-      notationHighlight: true,
-    },
-
+    slimsearch: true,
     components: {
       components: ["Badge", "VPCard"],
-    },
-    markdownTab: {
-      // 启用代码选项卡
-      codeTabs: true,
-      // 启用选项卡
-      tabs: true,
-    },
-    markdownHint: {
-      // 启用提示容器，默认启用
-      hint: true,
-      // 启用 GFM 警告
-      alert: true,
-    },
-    
-    // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      component: true,
-      demo: true,
-      include: true,
-      mark: true,
-      plantuml: true,
-      spoiler: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tasklist: true,
-      vPre: true,
-
-      // 在启用之前安装 chart.js
-      chart: true,
-
-      // insert component easily
-
-      // 在启用之前安装 echarts
-      echarts: true,
-
-      // 在启用之前安装 flowchart.ts
-      flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      gfm: true,
-
-      // 在启用之前安装 katex
-      // katex: true,
-
-      // 在启用之前安装 mathjax-full
-      // mathjax: true,
-
-      // 在启用之前安装 mermaid
-      mermaid: true,
-
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
-
-      // 在启用之前安装 reveal.js
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
-      // 在启用之前安装 @vue/repl
-      // vuePlayground: true,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: true,
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释

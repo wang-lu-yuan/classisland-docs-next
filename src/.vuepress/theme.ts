@@ -100,6 +100,8 @@ export default hopeTheme({
     sup: true,
     tasklist: true,
     vPre: true,
+    imgSize: true,
+    obsidianImgSize: true,
 
     // insert component easily
 

@@ -41,7 +41,7 @@ export default hopeTheme({
       footer: "Copyright (c) 2025 ClassIsland | " +
           '本文档以 CC BY-NC-SA 4.0 许可协议授权。' + 
           '<br/>' +
-          '<a href="https://beian.miit.gov.cn/" target="_blank"> 津ICP备2025035356号</a> | ',
+          '<a href="https://beian.miit.gov.cn/" target="_blank">津ICP备2025035356号</a>',
       //  autocorrect-enable
 
       displayFooter: true,

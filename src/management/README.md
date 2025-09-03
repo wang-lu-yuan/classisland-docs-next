@@ -28,13 +28,18 @@ category:
 
 ### 集控服务器
 
-_🚧正在开发_
+[📖参考文档](./management-server/README.md)]
+
+> [!IMPORTANT]
+> **本版本为预览版，仅用于测试和开发环境，请勿在生产环境中使用。**  
+> 目前项目还在早期开发阶段，可能会出现对数据结构的破坏性更改。
+
 
 <a id="get-started-compare"></a>
 
 ### 选哪个？
 
-(WIP)
+由于集控尚不成熟，建议您**尽量**使用静态部署。
 
 <a id="loading-progress"></a>
 
